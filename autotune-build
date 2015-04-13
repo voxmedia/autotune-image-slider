@@ -1,0 +1,33 @@
+#!/bin/bash
+
+BUILD_COMMAND="bundle exec middleman build"
+DEPLOY_COMMAND=''
+INPUT_DATA=$(</dev/stdin)
+SAVE_DATA_TO=data/autotune.json
+
+echo ''
+echo "Saving autotune data to $SAVE_DATA_TO"
+mkdir -p `dirname $SAVE_DATA_TO`
+echo "$INPUT_DATA" > $SAVE_DATA_TO
+
+echo ''
+echo 'Build data:'
+echo "$INPUT_DATA"
+
+echo ''
+echo 'Environment variables:'
+printenv
+
+echo ''
+echo 'Building the blueprint:'
+$BUILD_COMMAND
+
+if [ $? -eq 0 ]; then
+  echo ''
+  echo 'Deploying the build:'
+  $DEPLOY_COMMAND
+else
+  echo ''
+  echo 'Build failed'
+  exit 1
+fi

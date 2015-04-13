@@ -1,0 +1,76 @@
+$orange: rgb(255, 153, 51);
+$orange-dark: rgb(229, 137, 45);
+.app {
+    width: 50%;
+}
+.image-compare-tool {
+  margin: 0 auto 1.5em 0;
+  max-width: 100%;
+  // width: 100%;
+  z-index:999; /* The verge tries to do tricky things with embeds in the feature slot */
+}
+.image-compare-images {
+  font-size: 0;
+  position: relative;
+  // height:100%; /* The verge tries to do tricky things with embeds in the feature slot */
+  -ms-touch-action: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+.image-compare-images:hover {
+  cursor: col-resize;
+}
+
+.image-compare-images img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.image-compare-top,
+.image-compare-bottom {
+  z-index: 0;
+  // height:100%; /* The verge tries to do tricky things with embeds in the feature slot */
+}
+
+.image-compare-top {
+  background-size: cover;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 50%;
+  &.dark-bar{
+    &:before{
+      background-color: #474747;
+    }
+    &:after{
+      background-color: #474747;
+    }
+  }
+  &:before{
+    background-color: #fff;
+    content: '';
+    height: 100%;
+    left: 100%; // Old browsers
+    left: calc( 100% - 2.5px );
+    top: 0;
+    position: absolute;
+    width: 5px;
+  }
+  &:after{
+    background-color: #fff;
+    content: '';
+    height: 50px;
+    left: 100%; // Old browsers
+    left: calc( 100% - 5px );
+    top: 50%; // Old browsers
+    top: calc( 50% - 25px );
+    position: absolute;
+    width: 10px;
+  }
+}
+
+.image-compare-top img {
+  display: none;
+}

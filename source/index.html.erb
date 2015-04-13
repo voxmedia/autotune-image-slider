@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <script>var autotune = <%= data.autotune.to_json %></script>
+  <head>
+    <meta charset="utf-8">
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= data.autotune.title %></title>
+
+    <%= stylesheet_link_tag "custom" %>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <%= partial 'partials/body', locals: {
+             var: 'example variable'} %>
+    <%= javascript_include_tag "image-slider.js" %>
+  </body>
+</html>

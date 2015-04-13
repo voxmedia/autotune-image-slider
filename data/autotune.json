@@ -1,0 +1,10 @@
+{
+  "title": "Autotune Image Slider",
+  "slug": "autotune-image-slider",
+  "image_left": "http://upload.wikimedia.org/wikipedia/commons/9/9c/Old_Well_1892.jpg",
+  "image_right": "http://www.thomaswolfe.org/wp-content/uploads/2014/01/The-Old-Well-at-UNC-Chapel-Hill.jpg",
+  "image_source_info": [{"image_text": "Image one", "url": "http://google.com"}, {"image_text": "Image two"}],
+  "tweet_text": "Check out this image slider",
+  "share_url": "sharing-url",
+  "slider_theme": "light-bar"
+}
