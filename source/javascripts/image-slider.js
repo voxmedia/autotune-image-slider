@@ -13,10 +13,42 @@ ImageSlider.Public = ( function ( $ ) {
       $( this ).attr( 'src', ImageSlider.image_right );
     } );
     $( '.image-compare-top' ).addClass(ImageSlider.slider_theme);
+
+    if(ImageSlider.image_source_info){
+      addSources();
+    }
     addEvents();
   };
 
   "use strict";
+
+  function addSources(){
+    var source_str = 'Sources: ';
+
+    $.each(ImageSlider.image_source_info, function(i, d){
+      if(d.image_text && d.url){
+        source_str += '<a href="'+d.url+'" target="blank">'+d.image_text+'</a>';
+      } else if(d.image_text) {
+        source_str += d.image_text;
+      } else if(d.url) {
+        source_str += '<a href="'+d.url+'" target="blank">'+d.url+'</a>';
+      }
+      if(ImageSlider.image_source_info.length > 1){
+        source_str += addSep(i, ImageSlider.image_source_info.length);
+      }
+    })
+    $('.sources').append(source_str);
+  }
+
+  function addSep(i, n){
+    if (i==(n-1)){
+      return '';
+    } else if (i==(n-2)){
+      return ' and ';
+    } else {
+      return ', ';
+    }
+  }
 
   var $tool        = $( '.image-compare-tool'       ),
       $images      = $( '.image-compare-images'     ),

@@ -1,9 +1,21 @@
 {
-  "title": "batman slider",
-  "slug": "batman-slider",
-  "image_left": "http://rack.1.mshcdn.com/media/ZgkyMDE0LzEwLzEwLzI4L0JhdG1hblRodW1iLmFmNjMzLnBuZwpwCXRodW1iCTk1MHg1MzQjCmUJanBn/db038ccc/d73/BatmanThumbWEB.jpg",
+  "title": "Batman Image Slider",
+  "slug": "batman-image-slider",
+  "image_left": "http://vignette1.wikia.nocookie.net/youngjustice/images/0/0f/Bruce_Wayne.png/revision/latest?cb=20111202230120",
   "image_right": "http://static.comicvine.com/uploads/original/11116/111164870/3847551-9865926659-batma.jpg",
+  "image_source_info": [
+    {
+      "image_text": "Source 1",
+      "url": "http://google.com"
+    },
+    {
+      "image_text": "Source 2"
+    },
+    {
+      "url": "http://google.com"
+    }
+  ],
   "tweet_text": "batman slider",
-  "share_url": "http://google.com",
+  "share_url": "http://theverge.com",
   "slider_theme": "light-bar"
 }
