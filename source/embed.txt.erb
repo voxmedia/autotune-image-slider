@@ -1,5 +1,5 @@
-<div id="<%=data.autotune.slug %>__graphic"></div>
-<%=javascript_include_tag('pym') %>
+<div id="<%= slug %>__graphic"></div>
+<script type="text/javascript" src="<%= absolute_prefix + asset_path(:js, 'pym') %>"></script>
 <script type="text/javascript">
-new pym.Parent('<%=data.autotune.slug %>__graphic', '<%=asset_url('/') %>', {xdomain: '.*\.voxmedia\.com'});
+new pym.Parent('<%= slug %>__graphic', '<%= absolute_page_url %>', {xdomain: '.*\.voxmedia\.com'});
 </script>
