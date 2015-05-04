@@ -6,7 +6,6 @@ ImageSlider.Public = ( function ( $ ) {
     $( '.image-compare-top img' ).each( function () {
       $( this ).attr( 'src', ImageSlider.image_left );
       var parentDiv = $( this ).parent();
-      console.log(ImageSlider.image_left);
       parentDiv.css( 'background-image', 'url(' + ImageSlider.image_left + ')' );
     } );
     // update right photo as image src

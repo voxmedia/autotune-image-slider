@@ -1,10 +1,9 @@
 {
-  "title": "Autotune Image Slider",
-  "slug": "autotune-image-slider",
-  "image_left": "http://upload.wikimedia.org/wikipedia/commons/9/9c/Old_Well_1892.jpg",
-  "image_right": "http://www.thomaswolfe.org/wp-content/uploads/2014/01/The-Old-Well-at-UNC-Chapel-Hill.jpg",
-  "image_source_info": [{"image_text": "Image one", "url": "http://google.com"}, {"image_text": "Image two"}],
-  "tweet_text": "Check out this image slider",
-  "share_url": "sharing-url",
+  "title": "batman slider",
+  "slug": "batman-slider",
+  "image_left": "http://rack.1.mshcdn.com/media/ZgkyMDE0LzEwLzEwLzI4L0JhdG1hblRodW1iLmFmNjMzLnBuZwpwCXRodW1iCTk1MHg1MzQjCmUJanBn/db038ccc/d73/BatmanThumbWEB.jpg",
+  "image_right": "http://static.comicvine.com/uploads/original/11116/111164870/3847551-9865926659-batma.jpg",
+  "tweet_text": "batman slider",
+  "share_url": "http://google.com",
   "slider_theme": "light-bar"
 }
