@@ -1,84 +1,94 @@
 {
-  "name": "Autotune Image Slider",
-  "description": "Blueprint for creating an image slider.",
-  "instructions": "## Instructions\n",
-  "type": "app",
-  "tags": ["Example"],
-  "thumbnail": "thumbnail.jpg",
-  "authors": [""],
-  "form": {
-    "schema": {
-      "title": "Autotune Image Slider",
-      "description": "image slider",
-      "type": "object",
-      "properties": {
-        "image_left": {
-          "title": "First image",
-          "description": "url for first image",
-          "type": "string",
-          "required": true
-        },
-        "image_right": {
-          "title": "Second image",
-          "description": "url for second image",
-          "type": "string",
-          "required": true
-        },
-        "image_source_info": {
-          "title": "Image source information (Optional)",
-          "type": "array",
-          "items": {
-              "title": "Image",
-              "type": "object",
-              "maxItems": 2,
-              "properties": {
-                  "image_text": {
-                      "title": "Image source text",
-                      "type": "string"
-                  },
-                  "url": {
-                      "title": "Image source url",
-                      "type": "string"
-                  }
-              }
-          }
-        },
-        "tweet_text":{
-          "title": "Tweet Text",
-          "description": "text for twitter",
-          "type": "string",
-          "required": false
-        },
-        "share_url":{
-          "title": "Sharing URL",
-          "description": "url for sharing",
-          "type": "string",
-          "required": true
-        },
-        "slider_theme": {
-          "title": "Slider theme",
-          "type": "string",
-          "required": true,
-          "default": "light",
-          "enum": ["light-bar", "dark-bar"]
-        },
-      }
-    },
-    "options": {
-      "fields": {
-        "image_source_info": {
-            "fields": {
-                "url": {
-                    "label": "URL"
+    "name": "Autotune Image Slider",
+    "description": "Blueprint for creating an image slider.",
+    "instructions": "\n",
+    "type": "app",
+    "tags": [
+        "Example"
+    ],
+    "thumbnail": "thumbnail.jpg",
+    "authors": [
+        ""
+    ],
+    "form": {
+        "schema": {
+            "title": "Autotune Image Slider",
+            "description": "image slider",
+            "type": "object",
+            "properties": {
+                "image_left": {
+                    "title": "First image",
+                    "description": "url for first image",
+                    "type": "string",
+                    "required": true
+                },
+                "image_right": {
+                    "title": "Second image",
+                    "description": "url for second image",
+                    "type": "string",
+                    "required": true
+                },
+                "image_source_info": {
+                    "title": "Image source information (Optional)",
+                    "type": "array",
+                    "items": {
+                        "title": "Image",
+                        "type": "object",
+                        "maxItems": 2,
+                        "properties": {
+                            "image_text": {
+                                "title": "Image source text",
+                                "type": "string"
+                            },
+                            "url": {
+                                "title": "Image source url",
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "tweet_text": {
+                    "title": "Tweet Text",
+                    "description": "text for twitter",
+                    "type": "string",
+                    "required": false
+                },
+                "share_url": {
+                    "title": "Sharing URL",
+                    "description": "url for sharing",
+                    "type": "string",
+                    "required": true
+                },
+                "slider_theme": {
+                    "title": "Slider theme",
+                    "type": "string",
+                    "required": true,
+                    "default": "light",
+                    "enum": [
+                        "light-bar",
+                        "dark-bar"
+                    ]
                 }
             }
         },
-        "slider_theme": {
-          "type": "radio",
-          "label": "Slider theme",
-          "optionLabels": ["Light", "Dark"]
+        "options": {
+            "fields": {
+                "image_source_info": {
+                    "fields": {
+                        "url": {
+                            "label": "URL"
+                        }
+                    }
+                },
+                "slider_theme": {
+                    "type": "radio",
+                    "label": "Slider theme",
+                    "optionLabels": [
+                        "Light",
+                        "Dark"
+                    ]
+                }
+            }
         }
-      }
     }
-  }
 }
