@@ -1,5 +1,7 @@
 var ImageSlider = autotune;
 
+var pymChild = new pym.Child();
+
 ImageSlider.Public = ( function ( $ ) {
   var addImages = function () {
     // update left photo as background
@@ -23,6 +25,7 @@ ImageSlider.Public = ( function ( $ ) {
   "use strict";
 
   function addSources(){
+
     var source_str = 'Sources: ';
 
     $.each(ImageSlider.image_source_info, function(i, d){
@@ -38,6 +41,7 @@ ImageSlider.Public = ( function ( $ ) {
       }
     })
     $('.sources').append(source_str);
+    pymChild.sendHeight();
   }
 
   function addSep(i, n){
