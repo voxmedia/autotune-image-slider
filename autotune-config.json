@@ -11,39 +11,46 @@
         ""
     ],
     "form": {
-        "schema": {
+      "schema": {
             "title": "Autotune Image Slider",
             "description": "image slider",
             "type": "object",
             "properties": {
                 "image_left": {
-                    "title": "First image",
-                    "description": "url for first image",
-                    "type": "string",
-                    "required": true
+                    "title": "First Image",
+                    "type": "object",
+                    "properties": {
+                        "image_url":{
+                            "title": "First image",
+                            "format": "uri",
+                            "required": true
+                        },
+                        "credit": {
+                            "title": "<span style='color: #A9A9A9;'>Image Credit (Optional)</span>",
+                            "type": "string"
+                        },
+                        "source": {
+                            "title": "<span style='color: #A9A9A9;'>Image Credit Source URL (Optional)</span>",
+                            "type": "string"
+                        }
+                    }
                 },
                 "image_right": {
-                    "title": "Second image",
-                    "description": "url for second image",
-                    "type": "string",
-                    "required": true
-                },
-                "image_source_info": {
-                    "title": "Image source information (Optional)",
-                    "type": "array",
-                    "items": {
-                        "title": "Image",
-                        "type": "object",
-                        "maxItems": 2,
-                        "properties": {
-                            "image_text": {
-                                "title": "Image source text",
-                                "type": "string"
-                            },
-                            "url": {
-                                "title": "Image source url",
-                                "type": "string"
-                            }
+                    "title": "Second Image",
+                    "type": "object",
+                    "properties": {
+                        "image_url":{
+                            "title": "Second image",
+                            "format": "uri",
+                            "required": true
+                        },
+                        "credit": {
+                            "title": "<span style='color: #A9A9A9;'>Image Credit (Optional)</span>",
+                            "type": "string"
+                        },
+                        "source": {
+                            "title": "<span style='color: #A9A9A9;'>Image Credit Source URL (Optional)</span>",
+                            "type": "string"
                         }
                     }
                 },
@@ -53,17 +60,11 @@
                     "type": "string",
                     "required": false
                 },
-                "share_url": {
-                    "title": "Sharing URL",
-                    "description": "url for sharing",
-                    "type": "string",
-                    "required": true
-                },
                 "slider_theme": {
-                    "title": "Slider theme",
+                    "title": "Slider bar color",
                     "type": "string",
                     "required": true,
-                    "default": "light",
+                    "default": "light-bar",
                     "enum": [
                         "light-bar",
                         "dark-bar"
@@ -73,19 +74,27 @@
         },
         "options": {
             "fields": {
-                "image_source_info": {
-                    "fields": {
-                        "url": {
-                            "label": "URL"
+                "image_left":{
+                    "fields":{
+                       "image_url":{
+                        "type": "url",
+                        "label": "URL"
+                        }
+                    }
+                },
+                "image_right":{
+                    "fields":{
+                       "image_url":{
+                        "type": "url",
+                        "label": "URL"
                         }
                     }
                 },
                 "slider_theme": {
                     "type": "radio",
-                    "label": "Slider theme",
                     "optionLabels": [
-                        "Light",
-                        "Dark"
+                        "White",
+                        "Dark Gray"
                     ]
                 }
             }
