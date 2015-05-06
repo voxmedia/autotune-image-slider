@@ -6,35 +6,46 @@ ImageSlider.Public = ( function ( $ ) {
   var addImages = function () {
     // update left photo as background
     $( '.image-compare-top img' ).each( function () {
-      $( this ).attr( 'src', ImageSlider.image_left );
+      $( this ).attr( 'src', ImageSlider.image_left.image_url );
       var parentDiv = $( this ).parent();
-      parentDiv.css( 'background-image', 'url(' + ImageSlider.image_left + ')' );
+      parentDiv.css( 'background-image', 'url(' + ImageSlider.image_left.image_url + ')' );
     } );
     // update right photo as image src
     $( '.image-compare-bottom img' ).each( function () {
-      $( this ).attr( 'src', ImageSlider.image_right );
+      $( this ).attr( 'src', ImageSlider.image_right.image_url );
     } );
     $( '.image-compare-top' ).addClass(ImageSlider.slider_theme);
 
-    if(ImageSlider.image_source_info){
-      addSources();
+    var left_image = Object.keys(ImageSlider.image_left).length;
+    var right_image = Object.keys(ImageSlider.image_right).length;
+
+    if(left_image > 1 && right_image > 1){
+      ImageSlider.image_source_info = [ImageSlider.image_left, ImageSlider.image_right];
+      addSources('Sources', ImageSlider.image_source_info);
+    } else if (left_image > 1 || right_image > 1){
+      if(left_image > 1){
+        ImageSlider.image_source_info = [ImageSlider.image_left];
+      } else if (right_image > 1){
+        ImageSlider.image_source_info = [ImageSlider.image_right];
+      }
+      addSources('Source', ImageSlider.image_source_info);
     }
     addEvents();
   };
 
   "use strict";
 
-  function addSources(){
+  function addSources(source){
 
-    var source_str = 'Sources: ';
+    var source_str = source+": ";
 
     $.each(ImageSlider.image_source_info, function(i, d){
-      if(d.image_text && d.url){
-        source_str += '<a href="'+d.url+'" target="blank">'+d.image_text+'</a>';
-      } else if(d.image_text) {
-        source_str += d.image_text;
-      } else if(d.url) {
-        source_str += '<a href="'+d.url+'" target="blank">'+d.url+'</a>';
+      if(d.credit && d['source']){
+        source_str += '<a href="'+d['source']+'" target="blank">'+d.credit+'</a>';
+      } else if(d.credit) {
+        source_str += d.credit;
+      } else if(d['source']) {
+        source_str += '<a href="'+d['source']+'" target="blank">'+d['source']+'</a>';
       }
       if(ImageSlider.image_source_info.length > 1){
         source_str += addSep(i, ImageSlider.image_source_info.length);
