@@ -17,18 +17,16 @@ activate :directory_indexes
 set :share_url, data.autotune.share_url
 set :tweet_text, data.autotune.tweet_text
 
-
+# Build-specific configuration
 configure :build do
-  # For example, change the Compass output style for deployment
-  # activate :minify_css
+  require 'uri'
+  uri = URI(data.autotune.base_url)
+  set :absolute_prefix, "#{uri.scheme}://#{uri.host}"
 
-  # Minify Javascript on build
-  # activate :minify_javascript
+  set :url_prefix, uri.path
+  set :http_prefix, data.autotune.base_url
 
-  # Enable cache buster
-  # activate :asset_hash
-
-  # Use relative URLs
-  # activate :relative_assets
-  set :http_prefix, data.autotune.base_url if data.autotune.base_url
+  activate :asset_hash
+  activate :minify_javascript
+  activate :minify_css
 end
