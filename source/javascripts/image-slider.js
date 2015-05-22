@@ -98,7 +98,7 @@
     addImages();
     setTimeout(function(){
       pymChild.sendHeight();
-    }, 120);
+    }, 300);
 
   });
 })($);
