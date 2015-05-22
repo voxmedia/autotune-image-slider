@@ -1,5 +1,5 @@
   var ImageSlider = autotune;
-
+  var pymChild = new pym.Child();
   ImageSlider.Public = ( function ( $ ) {
 
     var addImages = function () {
@@ -15,6 +15,8 @@
       } );
       $( '.image-compare-top' ).addClass(ImageSlider.slider_theme);
 
+      addEvents();
+
       var left_image = Object.keys(ImageSlider.image_left).length;
       var right_image = Object.keys(ImageSlider.image_right).length;
 
@@ -29,7 +31,6 @@
         }
         addSources('Source', ImageSlider.image_source_info);
       }
-      addEvents();
     };
 
     "use strict";
@@ -87,18 +88,18 @@
 
     var addEvents = function () {
       $images.each( function () {
+        console.log($( this ))
         $( this ).on( 'mousemove',  createSlider );
         $( this ).on( 'touchstart', createSlider );
         $( this ).on( 'touchmove',  createSlider );
       } );
+
     };
 
+    window.onload = function () { pymChild.sendHeight(); }
+
   $(document).ready(function() {
-    var pymChild = new pym.Child();
     addImages();
-    setTimeout(function(){
-      pymChild.sendHeight();
-    }, 300);
 
   });
 })($);
