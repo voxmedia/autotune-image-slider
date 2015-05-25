@@ -7,6 +7,7 @@ This an image slider constructed as a blueprint for use within [Autotune](https:
 ## Getting started
 
 After cloning the project:
+
 1. Install dependencies by running: `$ bundle install`
 2. Start middleman by running: `$ bundle exec middleman`
 
