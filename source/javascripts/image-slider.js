@@ -69,12 +69,18 @@
         $topImage    = $( '.image-compare-top img'    ),
         $bottomImage = $( '.image-compare-bottom img' );
 
+    $topImage[0].height = $bottomImage[0].height;
+
+    console.log($topImage[0].height);
+    console.log($bottomImage[0].height);
+
     var createSlider = function ( e ) {
       e.preventDefault();
       var topImage    = $( this ).find( '.image-compare-top' ),
           bottomImage = $( this ).find( '.image-compare-bottom img' )[0],
           size        = bottomImage.getBoundingClientRect(),
           position;
+
       if ( e.originalEvent.type == 'mousemove' ) {
         position    = ( ( e.pageX - size.left ) / bottomImage.offsetWidth ) * 100;
       } else {
