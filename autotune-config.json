@@ -2,7 +2,7 @@
     "name": "Autotune Image Slider",
     "description": "Blueprint for creating an image slider.",
     "instructions": "\n",
-    "type": "app",
+    "type": "graphic",
     "tags": [
         "Example"
     ],
