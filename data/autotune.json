@@ -11,5 +11,6 @@
     "credit": "The Joker"
   },
   "tweet_text": "batman slider",
-  "slider_theme": "light-bar"
+  "slider_theme": "light-bar",
+  "base_url": "localhost:4567"
 }
