@@ -36,7 +36,7 @@ ImageSlider.Public = ( function ( $ ) {
   "use strict";
 
   function addSources(source){
-    $('.sources').html = "";
+    $('.sources').empty();
     var source_str = source+": ";
 
     $.each(ImageSlider.image_source_info, function(i, d){
@@ -52,7 +52,6 @@ ImageSlider.Public = ( function ( $ ) {
       }
     })
     $('.sources').append(source_str);
-    pymChild.sendHeight();
   }
 
   function addSep(i, n){
@@ -115,6 +114,11 @@ $(document).ready(function() {
     console.log('----------- received message', data);
     ImageSlider = JSON.parse(data);
     addImages();
+  })
+
+  $('body').change(function(){
+    console.log('body change');
+    pymChild.sendHeight();
   })
 
 });
