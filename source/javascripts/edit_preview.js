@@ -106,7 +106,10 @@ ImageSlider.Public = ( function ( $ ) {
 
   };
 
-  window.onload = function () { pymChild.sendHeight(); }
+  window.onload = function () {
+    console.log('onload finished');
+    pymChild.sendHeight();
+  }
 
 $(document).ready(function() {
   if(window.location.hash === '#new'){
@@ -121,7 +124,7 @@ $(document).ready(function() {
     pymChild.sendHeight();
     setTimeout(function(){
       pymChild.sendHeight();
-    }, 3000);
+    }, 1000);
   })
 
 });
