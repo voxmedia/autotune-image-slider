@@ -36,7 +36,7 @@ ImageSlider.Public = ( function ( $ ) {
   "use strict";
 
   function addSources(source){
-
+    $('.sources').html = "";
     var source_str = source+": ";
 
     $.each(ImageSlider.image_source_info, function(i, d){
@@ -52,6 +52,7 @@ ImageSlider.Public = ( function ( $ ) {
       }
     })
     $('.sources').append(source_str);
+    pymChild.sendHeight();
   }
 
   function addSep(i, n){
@@ -90,7 +91,6 @@ ImageSlider.Public = ( function ( $ ) {
     if ( position <= 100 ) {
       topImage.css( { 'width': position + '%' } );
     }
-    pymChild.sendHeight();
   };
 
   var addEvents = function () {
