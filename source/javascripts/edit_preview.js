@@ -106,9 +106,6 @@ ImageSlider.Public = ( function ( $ ) {
 
   };
 
-  // window.onload = function () {
-  //   pymChild.sendHeight();
-  // }
   $(window).on('load resize', function(){
     console.log('load/resize');
     pymChild.sendHeight();
@@ -117,9 +114,6 @@ ImageSlider.Public = ( function ( $ ) {
 $(document).ready(function() {
   if(window.location.hash === '#new'){
     addImages();
-    // setTimeout(function(){
-    //   pymChild.sendHeight();
-    // }, 1000);
   }
   pymChild.sendMessage('childLoaded', 'ready');
 
@@ -127,10 +121,10 @@ $(document).ready(function() {
     console.log('----------- received message', data);
     ImageSlider = JSON.parse(data);
     addImages();
-    pymChild.sendHeight();
-    setTimeout(function(){
-      pymChild.sendHeight();
-    }, 1000);
+    // pymChild.sendHeight();
+    // setTimeout(function(){
+    //   pymChild.sendHeight();
+    // }, 1000);
   })
 
 });
