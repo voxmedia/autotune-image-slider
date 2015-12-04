@@ -2,13 +2,10 @@
   "title": "Batman Image Slider",
   "slug": "batman-image-slider",
   "image_left": {
-    "image_url": "http://vignette1.wikia.nocookie.net/youngjustice/images/0/0f/Bruce_Wayne.png/revision/latest?cb=20111202230120",
-    "credit": "Robin the sidekick"
+    "image_url": "http://vignette1.wikia.nocookie.net/youngjustice/images/0/0f/Bruce_Wayne.png/revision/latest?cb=20111202230120"
   },
   "image_right": {
-    "image_url": "http://static.comicvine.com/uploads/original/11116/111164870/3847551-9865926659-batma.jpg",
-    "source": "http://llmckinney.com/wp-content/uploads/2013/03/joker-the-joker-9028188-1024-768.jpg",
-    "credit": "The Joker"
+    "image_url": "http://static.comicvine.com/uploads/original/11116/111164870/3847551-9865926659-batma.jpg"
   },
   "tweet_text": "batman slider",
   "slider_theme": "light-bar",
