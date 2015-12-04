@@ -121,10 +121,6 @@ $(document).ready(function() {
     console.log('----------- received message', data);
     ImageSlider = JSON.parse(data);
     addImages();
-    // pymChild.sendHeight();
-    // setTimeout(function(){
-    //   pymChild.sendHeight();
-    // }, 1000);
   })
 
 });
