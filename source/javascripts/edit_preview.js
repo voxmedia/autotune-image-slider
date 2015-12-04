@@ -5,13 +5,17 @@ ImageSlider.Public = ( function ( $ ) {
   var addImages = function () {
     // update left photo as background
     $( '.image-compare-top img' ).each( function () {
-      $( this ).attr( 'src', ImageSlider.image_left.image_url );
-      var parentDiv = $( this ).parent();
-      parentDiv.css( 'background-image', 'url(' + ImageSlider.image_left.image_url + ')' );
+      if(ImageSlider.image_left.image_url){
+        $( this ).attr( 'src', ImageSlider.image_left.image_url );
+        var parentDiv = $( this ).parent();
+        parentDiv.css( 'background-image', 'url(' + ImageSlider.image_left.image_url + ')' );
+      }
     } );
     // update right photo as image src
     $( '.image-compare-bottom img' ).each( function () {
-      $( this ).attr( 'src', ImageSlider.image_right.image_url );
+      if(ImageSlider.image_right.image_url){
+        $( this ).attr( 'src', ImageSlider.image_right.image_url );
+      }
     } );
     $( '.image-compare-top' ).addClass(ImageSlider.slider_theme);
 
@@ -114,11 +118,10 @@ $(document).ready(function() {
     console.log('----------- received message', data);
     ImageSlider = JSON.parse(data);
     addImages();
-  })
-
-  $('body').change(function(){
-    console.log('body change');
     pymChild.sendHeight();
+    setTimeout(function(){
+      pymChild.sendHeight();
+    }, 3000);
   })
 
 });
