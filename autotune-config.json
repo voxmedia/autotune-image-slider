@@ -2,6 +2,8 @@
     "name": "Autotune Image Slider",
     "description": "Blueprint for creating an image slider.",
     "instructions": "\n",
+    "preview_type": "live",
+    "sample_data": "data/autotune.json",
     "type": "graphic",
     "tags": [
         "Example"

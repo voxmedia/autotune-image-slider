@@ -90,6 +90,7 @@ ImageSlider.Public = ( function ( $ ) {
     if ( position <= 100 ) {
       topImage.css( { 'width': position + '%' } );
     }
+    pymChild.sendHeight();
   };
 
   var addEvents = function () {
@@ -105,7 +106,16 @@ ImageSlider.Public = ( function ( $ ) {
   window.onload = function () { pymChild.sendHeight(); }
 
 $(document).ready(function() {
-  addImages();
+  if(window.location.hash === '#new'){
+    addImages();
+  }
+  pymChild.sendMessage('childLoaded', 'ready');
+
+  pymChild.onMessage('updateData', function(data) {
+    console.log('----------- received message', data);
+    ImageSlider = JSON.parse(data);
+    addImages();
+  })
 
 });
 })($);
