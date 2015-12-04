@@ -106,16 +106,20 @@ ImageSlider.Public = ( function ( $ ) {
 
   };
 
-  window.onload = function () {
+  // window.onload = function () {
+  //   pymChild.sendHeight();
+  // }
+  $(window).on('load resize', function(){
+    console.log('load/resize');
     pymChild.sendHeight();
-  }
+  });
 
 $(document).ready(function() {
   if(window.location.hash === '#new'){
     addImages();
-    setTimeout(function(){
-      pymChild.sendHeight();
-    }, 1000);
+    // setTimeout(function(){
+    //   pymChild.sendHeight();
+    // }, 1000);
   }
   pymChild.sendMessage('childLoaded', 'ready');
 
