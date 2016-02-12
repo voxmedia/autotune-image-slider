@@ -1,19 +1,16 @@
+@import '_theme';
+
 body{
-  font-family: 'helvetica';
+  font-family: $font-family-data;
   height:auto;
+  font-size: 16px;
+  color: $body-font-color;
 }
 a{
   color: #6B6B6B;
 }
-.sources {
-  font-size: 12px;
-  color: #363637;
-}
-.app {
-    // width: 50%;
-}
 .image-compare-tool {
-  margin: 0 auto 1.5em 0;
+  margin: 0 auto 0.8em 0;
   max-width: 100%;
   // width: 100%;
   z-index:999; /* The verge tries to do tricky things with embeds in the feature slot */

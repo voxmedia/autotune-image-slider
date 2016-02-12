@@ -22,7 +22,7 @@
 
       if(left_image > 1 && right_image > 1){
         ImageSlider.image_source_info = [ImageSlider.image_left, ImageSlider.image_right];
-        addSources('Sources', ImageSlider.image_source_info);
+        addSources('Source', ImageSlider.image_source_info);
       } else if (left_image > 1 || right_image > 1){
         if(left_image > 1){
           ImageSlider.image_source_info = [ImageSlider.image_left];
