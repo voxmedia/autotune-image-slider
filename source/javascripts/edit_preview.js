@@ -8,7 +8,7 @@ ImageSlider.Public = ( function ( $ ) {
       if(ImageSlider.image_left.image_url){
         $( this ).attr( 'src', ImageSlider.image_left.image_url );
         var parentDiv = $( this ).parent();
-        parentDiv.css( 'background-image', 'url(' + ImageSlider.image_left.image_url + ')' );
+        parentDiv.css( 'background-image', 'url("' + ImageSlider.image_left.image_url + '")' );
       }
     } );
     // update right photo as image src

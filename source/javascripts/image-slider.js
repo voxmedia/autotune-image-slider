@@ -7,7 +7,7 @@
       $( '.image-compare-top img' ).each( function () {
         $( this ).attr( 'src', ImageSlider.image_left.image_url );
         var parentDiv = $( this ).parent();
-        parentDiv.css( 'background-image', 'url(' + ImageSlider.image_left.image_url + ')' );
+        parentDiv.css( 'background-image', 'url("' + ImageSlider.image_left.image_url + '")' );
       } );
       // update right photo as image src
       $( '.image-compare-bottom img' ).each( function () {
