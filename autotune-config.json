@@ -3,12 +3,12 @@
     "description": "Blueprint for creating an image slider.",
     "instructions": "\n",
     "preview_type": "live",
+    "theme_type" : "dynamic",
     "sample_data": "data/autotune.json",
     "type": "graphic",
     "tags": [
         "Example"
-    ],
-    "themes": ["sbnation", "curbed", "theverge", "polygon", "racked", "eater", "vox", "custom", "recode"],
+    ],    
     "thumbnail": "thumbnail.png",
     "authors": [
         ""
