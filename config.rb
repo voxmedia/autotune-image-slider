@@ -22,7 +22,7 @@ helpers do
   def autotune_data_without_themes
     # Remove all theme_data
     ret = data.autotune.dup
-    ret = ret.delete('theme_data')
+    ret.delete('theme_data')
     ret
   end
 end
