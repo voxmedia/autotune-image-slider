@@ -20,14 +20,9 @@ set :tweet_text, data.autotune.tweet_text
 helpers do
   # Remove all theme info to reduce payload
   def autotune_data_without_themes
-    current_theme = data.autotune.theme
-    current_theme_data = data.autotune.theme_data[current_theme]
-
-    # Remove all keys except current theme
+    # Remove all theme_data
     ret = data.autotune.dup
-    ret.delete('theme_data')
-    ret['theme_data'] = {}
-    ret.theme_data[current_theme] = current_theme_data
+    ret = ret.delete('theme_data')
     ret
   end
 end
