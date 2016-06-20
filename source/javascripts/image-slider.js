@@ -13,7 +13,8 @@
       $( '.image-compare-bottom img' ).each( function () {
         $( this ).attr( 'src', ImageSlider.image_right.image_url );
       } );
-      $( '.image-compare-top' ).addClass(ImageSlider.slider_theme);
+      
+      $( '.image-compare-top' ).attr('class', 'image-compare-top ' + ImageSlider.slider_theme);
 
       addEvents();
 
