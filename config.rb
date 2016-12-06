@@ -1,7 +1,7 @@
 # Reload the browser automatically whenever files change
-configure :development do
-  activate :livereload
-end
+# configure :development do
+#   activate :livereload
+# end
 
 
 set :app_name, data.autotune.title

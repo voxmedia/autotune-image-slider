@@ -49,34 +49,37 @@ a{
   position: absolute;
   top: 0;
   width: 50%;
-  &.dark-bar{
-    &:before{
-      background-color: #474747;
-    }
-    &:after{
-      background-color: #474747;
-    }
-  }
-  &:before{
-    background-color: #fff;
-    content: '';
-    height: 100%;
-    left: 100%; // Old browsers
-    left: calc( 100% - 2.5px );
-    top: 0;
-    position: absolute;
-    width: 5px;
-  }
-  &:after{
-    background-color: #fff;
-    content: '';
-    height: 50px;
-    left: 100%; // Old browsers
-    left: calc( 100% - 5px );
-    top: 50%; // Old browsers
-    top: calc( 50% - 25px );
-    position: absolute;
-    width: 10px;
+}
+
+.handle {
+  height: 100%;
+  right: -20px;
+  width: 40px;
+  position: absolute;
+}
+
+.handle:before, .handle:after {
+  background-color: #fff;
+  content: '';
+  position: absolute;
+}
+.handle:before {
+  left: 16.5px;
+  top: 0;
+  bottom:0;
+  width: 5px;
+}
+.handle:after{
+  height: 50px;
+  left: 14px;
+  top: 50%;
+  top: calc( 50% - 25px );
+  width: 10px;
+}
+
+.dark-bar {
+  .handle:before, .handle:after {
+    background-color: #474747;
   }
 }
 
