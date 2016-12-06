@@ -8,8 +8,6 @@ ImageSlider.Public = ( function ( $ ) {
       $topImage    = $( '.image-compare-top img' ),
       $bottomImage = $( '.image-compare-bottom img' );
 
-  $topImage[0].height = $bottomImage[0].height;
-
   function addImages() {
     // update left photo as background
     if ( ImageSlider.image_left.image_url ) {
@@ -46,6 +44,10 @@ ImageSlider.Public = ( function ( $ ) {
       }
       addSources('Source', ImageSlider.image_source_info);
     }
+
+    $topImage[0].height = $bottomImage[0].height;
+
+    pymChild.sendHeight();
   };
 
   function addSources(source){
