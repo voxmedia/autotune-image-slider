@@ -23,7 +23,7 @@ These components are:
 
 ## Examples
 
-(Coming soon)
+(Coming soon)...
 
 ## Authors
 
