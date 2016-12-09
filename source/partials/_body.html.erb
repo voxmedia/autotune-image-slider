@@ -2,12 +2,12 @@
   <div class="image-compare-tool">
     <div class="image-compare-images">
       <div class="image-compare-bottom">
-        <img src="<%=data.autotune['image_right']['image_url'] %>"
+        <img src="<%=thumb_url data.autotune['image_right']['image_url'], width: 640 %>"
              srcset="<%=srcset data.autotune['image_right']['image_url'] %>"
              alt="<%=data.autotune['image_right']['alt_text'] || 'Slider right image' %>">
       </div>
       <div class="image-compare-top">
-        <img src="<%=data.autotune['image_left']['image_url'] %>"
+        <img src="<%=thumb_url data.autotune['image_left']['image_url'], width: 640 %>"
              srcset="<%=srcset data.autotune['image_left']['image_url'] %>"
              alt="<%=data.autotune['image_right']['alt_text'] || 'Slider right image' %>">
       </div>
