@@ -20,11 +20,13 @@ var pymChild = new pym.Child();
     // update left photo as background
     if ( imageData.image_left.image_url ) {
       topImage.setAttribute( 'src', imageData.image_left.image_url );
+      topImage.removeAttribute('srcset');
     }
 
     // update right photo as image src
     if ( imageData.image_right.image_url ) {
       bottomImage.setAttribute( 'src', imageData.image_right.image_url );
+      bottomImage.removeAttribute('srcset');
     }
 
     setup(imageData);
