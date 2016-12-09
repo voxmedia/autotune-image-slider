@@ -24,7 +24,7 @@ var pymChild = new pym.Child();
 
     // update right photo as image src
     if ( imageData.image_right.image_url ) {
-      $bottomImage.setAttribute( 'src', imageData.image_right.image_url );
+      bottomImage.setAttribute( 'src', imageData.image_right.image_url );
     }
 
     setup(imageData);
