@@ -76,7 +76,7 @@ helpers do
   # @param [String] An absolute image URL
   # @param [Array] A list of widths to include in the set
   # @return [String] A srcset string
-  def srcset(image_url, sizes = %w(2000 1600 1200 900 640 400))
+  def srcset(image_url, sizes = %w(2000 1600 1200 900 640))
     return '' unless thumbor_security_key.present? && thumbor_server_url.present?
     sizes.map do |w|
       url = thumb_url(image_url, :width => w)
