@@ -1,18 +1,15 @@
 {
   "image_left": {
-    "image_url": "https://cdn3.vox-cdn.com/uploads/chorus_asset/file/6031705/Fishing.0.jpg",
-    "credit": "(Martin Sahlin/Coldwood Interactive)",
-    "source": "http://www.google.com"
+    "image_url": "https://cdn1.vox-cdn.com/uploads/chorus_asset/file/7610175/generic_placeholder.0.jpeg",
+    "credit": "Vox Media",
+    "source": "http://www.voxmedia.com"
   },
   "image_right": {
-    "image_url": "https://cdn3.vox-cdn.com/uploads/chorus_asset/file/6033755/unravel_e3_screen2.0.jpg",
-    "credit": "Bobby Tables",
-    "source": "http://www.google.com"
+    "image_url": "https://cdn0.vox-cdn.com/uploads/chorus_asset/file/7610173/generic_placeholder_dark.0.jpeg",
+    "credit": "Vox Media",
+    "source": "http://www.voxmedia.com"
   },
   "slider_theme": "light-bar",
-  "title": "Yarny comparison",
-  "slug": "theverge-yarny-comparison",
-  "theme": "theverge",
-  "base_url": "//apps.voxmedia.com/at/theverge-yarny-comparison",
-  "asset_base_url": "//apps.voxmedia.com/at/theverge-yarny-comparison"
+  "title": "Image compare",
+  "slug": "autotune-image-slider"
 }

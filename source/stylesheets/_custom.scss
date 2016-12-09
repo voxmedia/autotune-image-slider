@@ -1,32 +1,28 @@
 @import '_theme';
 
-body{
+body {
   font-family: $font-family-data;
   height:auto;
   font-size: 16px;
   color: $body-font-color;
   margin: 0px;
 }
-a{
+a {
   color: #6B6B6B;
 }
 .image-compare-tool {
   margin: 0 auto 0.8em 0;
   max-width: 100%;
-  // width: 100%;
-  z-index:999; /* The verge tries to do tricky things with embeds in the feature slot */
+  z-index:999;
 }
 .image-compare-images {
   font-size: 0;
   position: relative;
-  // height:100%; /* The verge tries to do tricky things with embeds in the feature slot */
   -ms-touch-action: none;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
 }
-.image-compare-images:hover {
-  cursor: col-resize;
-}
+.image-compare-images:hover { cursor: col-resize; }
 
 .image-compare-images img {
   display: block;
@@ -42,20 +38,22 @@ a{
 }
 
 .image-compare-top {
-  background-size: cover;
-  object-fit: fill;
+  overflow:hidden;
   height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
   width: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .handle {
+  top: 0;
   height: 100%;
-  right: -20px;
+  left: 50%;
   width: 40px;
+  margin-left:-20px;
   position: absolute;
+  z-index:10;
 }
 
 .handle:before, .handle:after {
@@ -84,5 +82,7 @@ a{
 }
 
 .image-compare-top img {
-  display: none;
+  height:100%;
+  width:auto;
+  position:absolute;
 }

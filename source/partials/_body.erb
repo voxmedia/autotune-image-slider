@@ -2,12 +2,16 @@
   <div class="image-compare-tool">
     <div class="image-compare-images">
       <div class="image-compare-bottom">
-      	<%= image_tag("generic_placeholder.jpg", :alt => "Slider Bottom Image") %>
+        <img src="<%=data.autotune['image_right']['image_url'] %>"
+             srcset="<%=srcset data.autotune['image_right']['image_url'] %>"
+             alt="<%=data.autotune['image_right']['alt_text'] || 'Slider right image' %>">
       </div>
       <div class="image-compare-top">
-      	<%= image_tag("generic_placeholder.jpg", :alt => "Slider Top Image") %>
-        <div class="handle"></div>
+        <img src="<%=data.autotune['image_left']['image_url'] %>"
+             srcset="<%=srcset data.autotune['image_left']['image_url'] %>"
+             alt="<%=data.autotune['image_right']['alt_text'] || 'Slider right image' %>">
       </div>
+      <div class="handle"></div>
     </div>
   </div>
 </div>
