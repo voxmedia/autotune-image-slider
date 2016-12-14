@@ -11,5 +11,7 @@
   },
   "slider_theme": "light-bar",
   "title": "Image compare",
-  "slug": "autotune-image-slider"
+  "slug": "autotune-image-slider",
+  "base_url": "//apps.voxmedia.com/at/autotune-image-slider",
+  "asset_base_url": "//apps.voxmedia.com/at/autotune-image-slider"
 }

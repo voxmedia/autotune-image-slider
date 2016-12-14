@@ -66,9 +66,18 @@ var pymChild = new pym.Child();
       document.querySelector( '.image-compare-top' ).style.width = position + '%';
       document.querySelector( '.handle' ).style.left = position + '%';
     }
-  };
+  }
 
-  window.addEventListener('resize', function() { pymChild.sendHeight(); });
+  function loaded() {
+    if ( document.readyState === 'complete' ) {
+      pymChild.sendMessage('childLoaded', 'ready');
+      pymChild.sendHeight();
+    }
+  }
+
+  window.addEventListener('resize', function() { pymChild.sendHeight(); }, false);
+  document.addEventListener('readystatechange', loaded, false);
+  loaded();
 
   document.querySelector( '.image-compare-images' ).addEventListener( 'mousemove', createSlider );
   document.querySelector( '.handle' ).addEventListener( 'touchstart', createSlider );
